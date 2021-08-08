@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contents {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+
+#content {
+    margin: 20 auto;
+    width: 50%;
+    text-align: center;   
+}
+
+
+.contents h1{
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+img{
+    background: transparent;
+}
+
+tr:nth-child(odd) {
+    background-color:#dfccf1;
+}
+tr:nth-child(even) {
+    background-color:#cce2cb;
+}
+
+tr:first-child{
+    background-color: #dfccf1;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 75%;
+}
+#sub{
+    background-color: rebeccapurple;
+}
