@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>KeepUp</title>
+{% endblock %}
+
+{% block body %}
+    <div class= "contents">
+        <h1>KeepUp</h1>
+        <div class= form>
+            <form actions='/update/{{task.id}}' method="POST">
+                <input type = "text" name ="content" id = "content" value ='{{task.content}}'>
+                <p></p>
+                <input type = 'datetime-local' name = 'deadline' id ='deadline' value ='{{task.deadline}}'>
+                <p></p>
+                <input type='submit' value = 'Update'>
+    
+            </form>
+        </div>
+        
+    </div>
+{% endblock %}

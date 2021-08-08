@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>KeepUp</title>
+{% endblock %}
+
+{% block body %}
+    <div class= "contents">
+        <h1>KeepUp</h1>
+        <div class = 'form'>
+            <form actions='/' method="POST" >
+                <input type = "text" name ="content" id = "content"  >
+                <p></p>
+                <input type = 'datetime-local' name = 'deadline' id ='deadline'>
+                <p></p>
+                <input type='submit' value = 'Add Task'> 
+                <p></p>
+            </form>
+        </div>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Deadline</th>
+                <th>Actions</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.deadline}} </td>
+                <td>
+                    <a href="/delete/{{task.id}}"><img src = "{{url_for('static', filename='imageedit_4_2290850836.png')}}" width = "20px"></a>
+                    <br>
+                    <a href="/update/{{task.id}}"><img src="{{url_for('static', filename='imageedit_6_5595317754.png')}}" width = "20px"></a>
+                </td>
+            </tr>
+        {%  endfor %}  
+        </table>
+        
+        
+    </div>
+{% endblock %}
